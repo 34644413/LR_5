@@ -1,126 +1,151 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LERO - Ресторан</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Restaurant LERO</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .navbar-brand {
-            font-family: 'Georgia', serif;
-            font-size: 2em;
-        }
-        .hero-section {
-            background: url('path_to_hero_image.jpg') no-repeat center center;
+        .hero {
+            background-image: url('hero-image.jpg');
             background-size: cover;
-            height: 60vh;
+            background-position: center;
+            height: 100vh;
             color: white;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
             text-align: center;
-        }
-        .menu-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
-        .about-section {
-            padding: 50px 0;
-        }
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
         }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">LERO</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Головна</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#menu">Меню</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">Про нас</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Контакти</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<section id="home" class="hero-section">
-    <div class="container">
-        <h1>Ласкаво просимо до LERO</h1>
-        <p>Найкраще місце для вашого відпочинку та смакоти</p>
-    </div>
-</section>
-<section id="menu" class="menu-section">
-    <div class="container">
-        <h2 class="text-center">Наше меню</h2>
-        <div class="row">
-            <!-- Приклад пунктів меню -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="path_to_dish_image.jpg" class="card-img-top" alt="Dish Name">
-                    <div class="card-body">
-                        <h5 class="card-title">Назва страви</h5>
-                        <p class="card-text">Опис страви. Ціна: 100 грн.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Додати більше карток меню тут -->
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LERO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">Про нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Контакти</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="display-4">Ласкаво просимо до LERO</h1>
+        <p class="lead">Найкраще місце для вашого відпочинку</p>
     </div>
-</section>
-<section id="about" class="about-section">
-    <div class="container">
-        <h2 class="text-center">Про нас</h2>
-        <p>Ресторан "LERO" – це місце, де ви зможете насолодитися витонченою кухнею та приємною атмосферою. Ми використовуємо тільки свіжі та якісні інгредієнти, щоб створити незабутні страви.</p>
-    </div>
-</section>
-<section id="contact" class="contact-section">
-    <div class="container">
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Про нас</h2>
+                <p>Ресторан LERO – це місце, де поєднуються затишна атмосфера та вишукана кухня. Ми прагнемо зробити ваш візит незабутнім та смачним.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="about-image.jpg" class="img-fluid" alt="About LERO">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="container mt-5">
+        <h2 class="text-center">Наше Меню</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Закуски</h4>
+                <ul class="list-unstyled">
+                    <li>Брускетта з томатами</li>
+                    <li>Креветки в клярі</li>
+                    <li>Салат Цезар</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Основні страви</h4>
+                <ul class="list-unstyled">
+                    <li>Стейк з яловичини</li>
+                    <li>Лосось на грилі</li>
+                    <li>Паста Карбонара</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Десерти</h4>
+                <ul class="list-unstyled">
+                    <li>Тірамісу</li>
+                    <li>Чізкейк</li>
+                    <li>Морозиво</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mt-5">
+        <h2 class="text-center">Галерея</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="gallery-image1.jpg" class="img-fluid" alt="Gallery Image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="gallery-image2.jpg" class="img-fluid" alt="Gallery Image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="gallery-image3.jpg" class="img-fluid" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5">
         <h2 class="text-center">Контакти</h2>
         <div class="row">
             <div class="col-md-6">
-                <h5>Адреса:</h5>
-                <p>м. Київ, вул. Прекрасна, 10</p>
-                <h5>Телефон:</h5>
-                <p>+38 (050) 123-45-67</p>
-                <h5>Email:</h5>
-                <p>contact@lero.com</p>
+                <h4>Зв'яжіться з нами</h4>
+                <p>Телефон: +123 456 7890</p>
+                <p>Email: info@lero.com</p>
+                <p>Адреса: вул. Головна, 123, Київ, Україна</p>
             </div>
             <div class="col-md-6">
-                <h5>Напишіть нам</h5>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Ім'я</label>
-                        <input type="text" class="form-control" id="name" placeholder="Ваше ім'я">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ваш Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Повідомлення</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Ваше повідомлення"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Надіслати</button>
-                </form>
+                <h4>Години роботи</h4>
+                <p>Понеділок - П'ятниця: 10:00 - 22:00</p>
+                <p>Субота - Неділя: 12:00 - 24:00</p>
             </div>
         </div>
-    </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LERO. Всі права захищені.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
